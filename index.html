@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(244, 110, 73);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+      .form-container {
+        margin: 0 auto;
+        padding: 50px;
+        text-align: right;
+        background-color: white;
+        border-radius: 50px;
+      }
+      input {
+        width: 200px;
+        margin: 10px 0px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      input:hover
+      {
+        background-color: rgb(238, 235, 235);
+        color: black;
+      }
+      button
+      {
+        width: 150px;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 15px;
+      }
+      button:hover
+      {
+
+        background-color:rgb(244, 110, 73);
+        color: white;
+      }
+      p
+      {
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- loan page form-->
+  <div class="form-container">
+    <form action="confirm.html" onsubmit="return validateForm()" name="loanForm">
+        <table>
+          <tr>
+            <h1>Loan Application Details</h1>
+          </tr>
+          <tr>
+            <td><label for="a1">Full Name : </label></td>
+            <td><input type="text" placeholder="First Middle Last" name="fname" id="a1" onblur="error()" required /></td>
+            <tr>
+              <td></td>
+              <td> <p id="nameerror" ></p></td>
+            </tr>
+          </tr>
+
+          <tr>
+            <td><label for="a2">Email : </label></td>
+            <td><input type="email" id="a2" placeholder="name@gmail.com" name="email" required onblur="email1()" /></td>
+           <tr>
+            <td></td>
+            <td><p id="emailerror" ></p></td>
+           </tr>
+          </tr>
+
+          <tr>
+            <td><label for="a3">PAN Number : </label></td>
+            <td><input type="text" placeholder="ABCDE1542H" name="panno" id="a3" onblur="pan1()" /></td>
+          <tr>
+            <td></td>
+            <td><p id="panerror"></p></td>
+          </tr>
+          </tr>
+
+          <tr>
+            <td><label for="a4">Loan Amount : </label></td>
+            <td><input type="number" name="loan" maxlength="9" placeholder="Enter the Loan Amount" id="a4" oninput="convert()"/>
+              <p id="amounterror" ></p>
+            </td>
+          </tr>
+          
+          <tr>
+            <td colspan="2" style="text-align: center;"><button>Submit</button></td>
+          </tr>
+        </table>
+      </form>
+  </div>
+  <!-- Adding External javaScript file -->
+  <script src="indexjs.js"></script>
+  </body>
+</html>

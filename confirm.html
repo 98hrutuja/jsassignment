@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(232, 173, 156);
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    input {
+      height: 2rem;
+      font-size: 1.5rem;
+    }
+  </style>
+
+  <body>
+    <h2>Confirmation page</h2>
+    <div>
+      <p>
+        Dear <b> <span id="s2"></span></b><br/>
+        Thank you for inquiry. <br />
+        A 4 digit verification number has been sent to your Email:
+        <b><span id="s1"></span></b> <br />
+        please enter into the box and submit for confirmation.
+      </p>
+    </div>
+    <center>
+      <form action="#" id="myform">
+        <label for="b1">Enter OTP</label>
+        <input type="text" name="" id="b1" onblur="char()" />
+        <input
+          type="submit"
+          name=""
+          id="otp"
+          value="Validate"
+          onclick="myfunc()"
+        /><br />
+        <p id="p1"></p>
+      </form>
+    </center>
+
+    <!-- Adding external javascript file -->
+    <script src="confirmjs.js"></script>
+  </body>
+</html>
